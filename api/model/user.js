@@ -1,11 +1,12 @@
 module.exports = (sequelize, Sequelize) => {
-    const User = sequelize.define("pppp", {
-        name: {
+    const User = sequelize.define("users", {
+        username: {
             type: Sequelize.STRING
         },
-        price: {
-            type: Sequelize.DOUBLE
-        }
-    });
-    return User;
-};
+        password: {
+            type: Sequelize.TEXT
+        },
+    })
+
+    return User
+}

@@ -20,3 +20,16 @@ exports.findAll = (req, res) => {
         res.json(data)
     })
 }
+
+exports.findBySearch = (req, res) => {
+    const text = req.body.text
+    Product.findAll({
+        where: {
+            sku: {
+                [Op.like]: text + '%'
+            }
+        }
+    }).then(data => {
+        res.json(data)
+    })
+}

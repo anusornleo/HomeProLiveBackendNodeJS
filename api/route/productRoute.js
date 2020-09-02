@@ -7,5 +7,7 @@ module.exports = app => {
 
     router.get('/', product.findAll)
 
+    router.post('/search', product.findBySearch)
+
     app.use('/api/products', router);
 }
