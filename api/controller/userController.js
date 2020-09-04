@@ -63,5 +63,5 @@ exports.login = (req, res) => {
 }
 
 exports.findAll = (req, res) => {
-    User.findAll().then(data => { res.sent(data) })
+    User.findAll().then(data => { res.json(data) })
 }
